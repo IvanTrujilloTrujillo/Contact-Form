@@ -1,0 +1,48 @@
+<h1>Contact Form</h1>
+
+<form class="form" (ngSubmit)="onSubmit(form)" #form="ngForm">
+
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="name" class="sr-only">Name</label>
+    <input ngModel required type="text" class="form-control" id="name" placeholder="Name" name="name" #inputName="ngModel"
+      [ngClass]="{'invalid': inputName.invalid && inputName.touched}" [disabled]="sended">
+    <div class="alert alert-danger" role="alert" *ngIf="inputName.invalid && inputName.touched">
+      Name is required
+    </div>
+  </div>
+
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="ocuppation" class="sr-only">Occupation</label>
+    <input ngModel type="text" class="form-control" id="ocuppation" placeholder="Occupation" name="ocuppation" #inputOccupation="ngModel" [disabled]="sended">
+  </div>
+
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="email" class="sr-only">E-mail</label>
+    <input ngModel required email type="email" class="form-control" id="email" placeholder="E-mail" name="email" #inputEmail="ngModel"
+      [ngClass]="{'invalid': inputEmail.invalid && inputEmail.touched}" [disabled]="sended">
+    <div class="alert alert-danger" role="alert" *ngIf="inputEmail.invalid && inputEmail.touched">
+      E-mail is invalid
+    </div>
+  </div>
+
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="subject" class="sr-only">Subject</label>
+    <input ngModel required type="text" class="form-control" id="subject" placeholder="Subject" name="subject" #inputSubject="ngModel"
+      [ngClass]="{'invalid': inputSubject.invalid && inputSubject.touched}" [disabled]="sended">
+    <div class="alert alert-danger alert-subject" role="alert" *ngIf="inputSubject.invalid && inputSubject.touched">
+      Subject is required
+    </div>
+  </div>
+
+  <div class="form-group mx-sm-3 mb-2">
+    <textarea ngModel required minlength="10" maxlength="255" class="form-control" id="content" rows="6" placeholder="Content" name="content" #inputContent="ngModel"
+      [ngClass]="{'invalid': inputContent.invalid && inputContent.touched}" [disabled]="sended"></textarea>
+    <div class="alert alert-danger" role="alert" *ngIf="inputContent.invalid && inputContent.touched">
+      Content is invalid
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary" [disabled]="form.invalid || sended">
+    Send
+  </button>
+</form>
