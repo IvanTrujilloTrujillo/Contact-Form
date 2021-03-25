@@ -20,9 +20,8 @@ Contact-Form is a simple website based on a contact form with a validate system 
 
 ## Screenshots
 
-![Screenshot1](https://github.com/IvanTrujilloTrujillo/SneakersDB/blob/main/sneakers/src/main/resources/screenshots/Screenshot1.jpg)
-![Screenshot2](https://github.com/IvanTrujilloTrujillo/SneakersDB/blob/main/sneakers/src/main/resources/screenshots/Screenshot2.jpg)
-![Screenshot3](https://github.com/IvanTrujilloTrujillo/SneakersDB/blob/main/sneakers/src/main/resources/screenshots/Screenshot3.jpg)
+![Screenshot1](https://github.com/IvanTrujilloTrujillo/Contact-Form/blob/main/src/assets/screenshots/Screenshot1.jpg)
+![Screenshot2](https://github.com/IvanTrujilloTrujillo/Contact-Form/blob/main/src/assets/screenshots/Screenshot2.jpg)
 
 ## Author
 
